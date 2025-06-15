@@ -14,6 +14,7 @@ export type THomeStack = {
     Home:undefined;
     Profile:undefined;
        Calendar:undefined;
+       SubScreen:undefined
     
    
 };
