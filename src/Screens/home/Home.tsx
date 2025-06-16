@@ -1,10 +1,13 @@
-import {View, Text, FlatList, Image} from 'react-native';
+import {View, Text, FlatList, Image, Pressable} from 'react-native';
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import createStyles from './styles';
 import assets from '../../assets/index';
+import {useNavigation} from '@react-navigation/native';
 const styles = createStyles();
+
 const home = () => {
+  const navigation = useNavigation();
   const section1 = [
     {
       id: '1',
@@ -14,7 +17,7 @@ const home = () => {
     },
     {
       id: '2',
-      title: 'Semi Private Training',
+      title: 'Semi Private ',
       image: assets.doctor,
     },
     {
@@ -83,10 +86,10 @@ const home = () => {
   ];
   const renderItems = ({item}) => (
     <View style={styles.main2}>
-      <View>
+      <Pressable onPress={() => navigation.navigate('SubScreen', {item})}>
         <Image source={item.image} style={styles.image} />
         <Text style={styles.text1}>{item.title}</Text>
-      </View>
+      </Pressable>
     </View>
   );
   const renderItems1 = ({item}) => (
@@ -95,7 +98,6 @@ const home = () => {
         <Image source={item.image} style={styles.image1} />
         <Text style={styles.text1}>{item.title}</Text>
       </View>
-      
     </View>
   );
   const renderItems2 = ({item}) => (
