@@ -6,4 +6,7 @@ export default {
         img1: require('../assets/Images/img1.jpg'),
           img2: require('../assets/Images/img2.jpg'),
             doctor: require('../assets/Images/doc.jpg'),
+            logo: require('../assets/Images/fullLogo.png'),
+        email: require('../assets/Images/email.png'),
+            caw: require('../assets/Images/doc.jpg'),
 };

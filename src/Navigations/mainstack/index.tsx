@@ -8,6 +8,7 @@ import Profile from '../../Screens/profile/Profile.tsx';
 import TabNavigator from '../bottomTabBar.tsx';
 import Calendar from '../../Screens/calendar/Calendar.tsx';
 import SubScreen from '../../Screens/home/SubScreen/index.tsx';
+import Signup from '../../Screens/auth/signup/Signup.tsx';
 
 const Stack = createNativeStackNavigator<THomeStack>();
 const screens: TScreen<THomeStack>[] = [
@@ -38,13 +39,18 @@ const screens: TScreen<THomeStack>[] = [
     name: 'SubScreen',
     component: SubScreen,
   },
+   {
+    key: 'Signup',
+    name: 'Signup',
+    component: Signup,
+  },
 ];
 
 const MainStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName="TabNavigator">
+      initialRouteName="Signup">
       {screens.map(s => (
         <Stack.Screen
           key={s.key}
