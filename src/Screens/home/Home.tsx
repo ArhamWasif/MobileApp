@@ -4,10 +4,12 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import createStyles from './styles';
 import assets from '../../assets/index';
 import {useNavigation} from '@react-navigation/native';
+import SessionCard from '../../Components/RenderItems/RenderItem';
+import SessionCard1 from '../../Components/RenderItems/RenderItems1';
+import SessionCard2 from '../../Components/RenderItems/RenderItems2';
 const styles = createStyles();
 
 const home = () => {
-  const navigation = useNavigation();
   const section1 = [
     {
       id: '1',
@@ -84,30 +86,7 @@ const home = () => {
         'https://images.pexels.com/photos/6749777/pexels-photo-6749777.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
   ];
-  const renderItems = ({item}) => (
-    <View style={styles.main2}>
-      <Pressable onPress={() => navigation.navigate('SubScreen', {item})}>
-        <Image source={item.image} style={styles.image} />
-        <Text style={styles.text1}>{item.title}</Text>
-      </Pressable>
-    </View>
-  );
-  const renderItems1 = ({item}) => (
-    <View style={styles.main2}>
-      <View>
-        <Image source={item.image} style={styles.image1} />
-        <Text style={styles.text1}>{item.title}</Text>
-      </View>
-    </View>
-  );
-  const renderItems2 = ({item}) => (
-    <View style={styles.main}>
-      <View>
-        <Image source={item.image} style={styles.image2} />
-        <Text style={styles.text3}>{item.title}</Text>
-      </View>
-    </View>
-  );
+
   return (
     <SafeAreaProvider style={styles.SafeArea}>
       <View style={styles.container}>
@@ -116,7 +95,7 @@ const home = () => {
           data={section1}
           horizontal
           keyExtractor={item => item.id}
-          renderItem={renderItems}
+          renderItem={({item}) => <SessionCard item={item} />}
           showsHorizontalScrollIndicator={false}
         />
       </View>
@@ -126,7 +105,7 @@ const home = () => {
           data={section2}
           horizontal
           keyExtractor={item => item.id}
-          renderItem={renderItems1}
+          renderItem={({item}) => <SessionCard1 item={item} />}
           showsHorizontalScrollIndicator={false}
         />
       </View>
@@ -136,7 +115,7 @@ const home = () => {
           data={section3}
           horizontal
           keyExtractor={item => item.id}
-          renderItem={renderItems2}
+          renderItem={({item}) => <SessionCard2 item={item} />}
           showsHorizontalScrollIndicator={false}
         />
       </View>
