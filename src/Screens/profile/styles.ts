@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
-import { hp, wp } from '../../Utils/dimensions/dimensions';
-import { Fonts } from '../../shared/theme';
-
+import {hp, wp} from '../../Utils/dimensions/dimensions';
+import {Fonts} from '../../shared/theme';
 
 const createStyles = (COLORS: any) =>
   StyleSheet.create({
@@ -29,8 +28,7 @@ const createStyles = (COLORS: any) =>
       backgroundColor:
         COLORS.scheme === 'light' ? COLORS.White : COLORS.Text800,
       borderWidth: 1,
-      borderColor:
-        COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Border1,
+      borderColor: COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Border1,
       borderRadius: 12,
     },
 
@@ -74,13 +72,12 @@ const createStyles = (COLORS: any) =>
     Txt: {
       color: COLORS.TextColor,
       fontWeight: '600',
-      // left: wp('4'),
+
       fontFamily: Fonts.Medium,
       fontSize: 14,
     },
     centerRow: {flexDirection: 'row', alignItems: 'center', flex: 1},
     Row: {
-      // width: hp('41.5'),
       margin: 5,
       width: '92%',
       paddingTop: hp('1.5'),
@@ -90,8 +87,7 @@ const createStyles = (COLORS: any) =>
       borderWidth: 1,
       backgroundColor:
         COLORS.scheme === 'light' ? COLORS.White : COLORS.Text800,
-      borderColor:
-        COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Border1,
+      borderColor: COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Border1,
       borderRadius: 10,
     },
     BtnTraining: {
@@ -121,15 +117,11 @@ const createStyles = (COLORS: any) =>
     text18: {marginTop: hp(1)},
     HorizontalView: {
       marginTop: 2,
-      // paddingHorizontal: 13,
     },
     stopWatchView: {marginTop: hp(1)},
     HorizontalContainer: {
       borderRadius: 12,
-      
-      // borderWidth: 1,
-      // borderColor:
-      //   COLORS.scheme === 'dark' ? COLORS.lightSmoke : COLORS.DarkGray1,
+
       paddingHorizontal: 2,
       paddingVertical: 3,
     },
@@ -158,61 +150,19 @@ const createStyles = (COLORS: any) =>
       justifyContent: 'space-between',
     },
 
-    // HandlerRoot: {flex: 1},
-
     BottomSheet: {
       backgroundColor: COLORS.Black,
       paddingVertical: 20,
-      //  height: hp(30),
     },
     SheetContainer: {
       padding: 0,
-      // paddingVertical:-40,
+
       margin: 0,
     },
-    // container2: {
-    //   margin: 16,
-    //   right: -4,
-    //   position: 'relative',
-    // },
-    // label12: {
-    //   top: -10,
-    //   color: COLORS.scheme === 'light' ? COLORS.Black : COLORS.White,
-    //   paddingHorizontal: 4,
 
-    //   fontSize: 14,
-    // },
-    // label1: {
-    //   position: 'absolute',
-    //   top: -10,
-    //   left: 12,
-    //   fontWeight: 400,
-    //   color: COLORS.scheme === 'light' ? COLORS.Black : COLORS.White,
-    //   paddingHorizontal: 4,
-    //   fontSize: 12,
-    //   fontFamily: Fonts.Medium,
-    //   zIndex: 100,
-    // },
-
-    // input1: {
-    //   borderWidth: 1,
-    //   borderColor:
-    //     COLORS.scheme === 'light' ? COLORS.DarkGray1 : COLORS.Text975,
-    //   borderRadius: 8,
-    //   padding: 12,
-    //   backgroundColor: COLORS.scheme === 'light' ? COLORS.White : COLORS.Black,
-    //   width: hp('41'),
-    //   fontSize: 16,
-
-    //   textAlignVertical: 'top',
-    //   fontWeight: 400,
-    //   fontFamily: Fonts.Medium,
-    //   minHeight: 120,
-    // },
     container2: {
       margin: 16,
       position: 'relative',
-      
     },
     label1: {
       position: 'absolute',
@@ -220,16 +170,15 @@ const createStyles = (COLORS: any) =>
       left: 12,
       fontFamily: Fonts.Medium,
       fontWeight: '400',
-     backgroundColor: COLORS.scheme === 'light' ? COLORS.White : COLORS.Black,
+      backgroundColor: COLORS.scheme === 'light' ? COLORS.White : COLORS.Black,
       paddingHorizontal: 4,
       fontSize: 16,
       color: COLORS.scheme === 'light' ? COLORS.Black : COLORS.Text975,
       zIndex: 1,
     },
     input1: {
-    borderWidth: 1,
-      borderColor:
-        COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Text975,
+      borderWidth: 1,
+      borderColor: COLORS.scheme === 'light' ? COLORS.DarkGray : COLORS.Text975,
       borderRadius: 8,
       padding: 12,
       backgroundColor: COLORS.scheme === 'light' ? COLORS.White : COLORS.Black,
@@ -239,7 +188,7 @@ const createStyles = (COLORS: any) =>
       textAlignVertical: 'top',
       fontWeight: 400,
       fontFamily: Fonts.Medium,
-      minHeight: hp("20"),
+      minHeight: hp('20'),
     },
 
     btnCont: {
@@ -305,11 +254,10 @@ const createStyles = (COLORS: any) =>
     },
     label: {
       fontWeight: '600',
-     
-       fontSize: wp(3.5),
+
+      fontSize: wp(3.5),
       fontFamily: Fonts.Medium,
       color: COLORS.scheme === 'dark' ? COLORS.White : COLORS.Black,
-      // color: colors.scheme === 'dark' ? colors.White : colors.Black,
     },
     radioOption: {
       flexDirection: 'row',
