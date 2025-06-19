@@ -48,5 +48,5 @@ export const SignupFields = [
     icon: <SimpleLineIcons name="lock" color="grey" size={14} />,
     isPassword: true,
   },
-  // Aap aur bhi fields add kar sakte hain yahan
+  
 ];

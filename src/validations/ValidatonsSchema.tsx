@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import {emailErrMsg, emailRegex, passwordErrMsg, passwordRegex} from '../Components/TextInput/Regex/regex';
 export const SignUpVSchema = Yup.object({
   firstName: Yup.string()
     .label('First Name')
@@ -6,17 +7,17 @@ export const SignUpVSchema = Yup.object({
   lastName: Yup.string().label('Last Name').required('Last Name is required'),
   email: Yup.string()
     .label('Email')
-
+    .matches(emailRegex, emailErrMsg)
     .required('Email is required'),
 
   password: Yup.string()
     .label('Password')
-
+.matches(passwordRegex, passwordErrMsg)
     .required('Password is required')
     .min(6),
   confirmpassword: Yup.string()
     .label('Confirm Password')
-
+    .oneOf([Yup.ref('password'), null], 'Passwords must match')
     .required('Confirm Password is required')
     .min(6),
   phone: Yup.string()

@@ -1,5 +1,5 @@
 import {View, Text, Image, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import {SignupFields} from '../../../Constants/data/staticdata';
 import TextInputComp from '../../../Components/TextInput/TextInput';
 
@@ -11,10 +11,11 @@ import {Alert} from 'react-native';
 import {SignUpVSchema} from '../../../validations/ValidatonsSchema';
 import {createStyles} from './styles';
 import DashedLine from '../../../Components/DashedLine/DashedLine';
+import { Feather } from '../../../shared/Icons';
 
 const Signup = () => {
   const styles = createStyles();
-
+  const [secureTxtEntry, setSecureTxtEntry] = useState(true);
   const {handleSubmit, handleChange, handleBlur, values, errors, touched} =
     useFormik({
       initialValues: {
@@ -58,6 +59,16 @@ const Signup = () => {
                 isError={errors[item.name] && touched[item.name]}
                 leftIcon={item.icon}
                 maxLength={item.name === 'phone' ? 10 : undefined}
+                 rightIcon={
+                    item.isPassword && (
+                      <Feather
+                        name={secureTxtEntry ? 'eye-off' : 'eye'}
+                        color="gray"
+                        size={16}
+                        onPress={() => setSecureTxtEntry(!secureTxtEntry)}
+                      />
+                    )
+                  }
               />
             ))}
             <Button
