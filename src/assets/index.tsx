@@ -9,4 +9,5 @@ export default {
             logo: require('../assets/Images/fullLogo.png'),
         email: require('../assets/Images/email.png'),
             caw: require('../assets/Images/doc.jpg'),
+            google: require('../assets/Images/google.png'),
 };

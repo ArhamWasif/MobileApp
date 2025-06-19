@@ -6,7 +6,7 @@ const createStyles = () =>
     btn: {
       width: wp('90'),
       height: hp('6%'),
-    //   backgroundColor: COLORS.Primary,
+      backgroundColor: 'lightgreen',
       borderRadius: 12,
       alignSelf: 'center',
       alignItems: 'center',
@@ -18,7 +18,7 @@ const createStyles = () =>
       gap: 12,
     },
     btnTxt: {
-    //   color: COLORS.White,
+      color: "white",
     },
   });
 

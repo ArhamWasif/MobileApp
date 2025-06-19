@@ -9,6 +9,7 @@ export const SignupFields = [
     placeholder: 'First Name',
     icon: <MaterialIcons name="person-outline" color="black" size={18} />,
   },
+
   {
     name: 'lastName',
     placeholder: 'Last Name',
@@ -38,6 +39,12 @@ export const SignupFields = [
   {
     name: 'password',
     placeholder: 'Password',
+    icon: <SimpleLineIcons name="lock" color="grey" size={14} />,
+    isPassword: true,
+  },
+  {
+    name: 'confirmpassword',
+    placeholder: 'Confirm Password',
     icon: <SimpleLineIcons name="lock" color="grey" size={14} />,
     isPassword: true,
   },

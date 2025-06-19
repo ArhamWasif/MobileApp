@@ -536,3 +536,55 @@ export const SignUpInputFields = ({
     isPassword: true,
   },
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import {memo} from 'react';
+import {StyleSheet, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+
+const DashedLine = memo(() => {
+  return (
+    <View style={styles.dashedLineContainer}>
+      {[...Array(16)].map((_, index) => (
+        <LinearGradient
+          key={index}
+          colors={['#BCC8E5', '#BCC8E5', '#ABABAB']}
+          start={{x: 0, y: 0}}
+          end={{x: 1, y: 0}}
+          style={styles.dashItem}
+        />
+      ))}
+    </View>
+  );
+});
+
+const styles = StyleSheet.create({
+  dashedLineContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    zIndex: 1,
+  },
+  dashItem: {
+    width: 4,
+    height: 0.75,
+    marginHorizontal: 3,
+  },
+});
+
+export default DashedLine;

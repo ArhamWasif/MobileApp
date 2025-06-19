@@ -10,10 +10,8 @@ import {
   Text,
 } from 'react-native';
 import { AntDesign } from '../../shared/Icons';
-import createStyles from './styles';
 
-// import {Text16} from '../Text/Text';
-// import createStyles from './styles';
+import createStyles from './styles';
 // import {useTheme} from '../../../shared/theme';
 // import {AntDesign} from '../../../shared/vectorIcons';
 
@@ -47,7 +45,7 @@ const ButtonComp: React.FC<ButtonCompProps> = ({
   ...rest
 }) => {
   
-  const styles = createStyles():
+  const styles = createStyles()
 
   if (hide) {
     return null;
@@ -61,21 +59,25 @@ const ButtonComp: React.FC<ButtonCompProps> = ({
       disabled={disabled || loading}
       {...rest}>
       {loading ? (
-        <ActivityIndicator size="small" color={color || COLORS.White} />
+        <ActivityIndicator size="small" color={color || "white"} />
       ) : (
         <View style={[styles.row, rowStyle]}>
           {icon}
-          <Text
+          <Text style= {styles.btnTxt}
+           >
+            {btnName}
+          </Text>
+           {/* <Text16
             textStyle={[
               styles.btnTxt,
               styleTxt,
               {color: textColor || COLORS.White},
             ]}>
             {btnName}
-          </Text>
-          {rightIcon && (
+          </Text16> */}
+          {/* {rightIcon && (
             <AntDesign name={'arrowright'} size={24} color={COLORS.White} />
-          )}
+          )} */}
         </View>
       )}
     </TouchableOpacity>
