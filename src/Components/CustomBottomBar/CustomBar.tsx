@@ -22,7 +22,6 @@ const json = [
 const CustomBottomBar = ({state, navigation}: BottomTabBarProps) => {
   const inset = useSafeAreaInsets();
 
-  
   const getActiveRouteName = () => {
     const route = state.routes[state.index];
     if (route.state && route.state.index !== undefined) {

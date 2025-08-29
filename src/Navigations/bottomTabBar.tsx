@@ -1,8 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-
-
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import home from '../Screens/home/Home.tsx';
@@ -40,13 +37,12 @@ useEffect(() => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        headerShown: false,
+        headerShown: false
       }}
       tabBar={props => {
         return isKeyboardVisible ? null : <CustomBottomBar {...props} />;
       }}>
       <Tab.Screen name="Home" component={home} />
-
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
